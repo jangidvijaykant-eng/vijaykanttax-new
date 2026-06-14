@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vijay Kant Accounting & Tax Services | Jodhpur, Rajasthan</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1447e6;
+  --blue2:#1d4ed8;
+  --blue3:#1e40af;
+  --blue-lt:#eff6ff;
+  --blue-mid:#dbeafe;
+  --white:#ffffff;
+  --off:#f8faff;
+  --text:#0f172a;
+  --text2:#334155;
+  --muted:#64748b;
+  --border:#e2e8f0;
+  --border2:#bfdbfe;
+  --shadow:0 2px 16px rgba(20,71,230,0.07);
+  --shadow2:0 8px 40px rgba(20,71,230,0.13);
+  --r:12px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;}
+#public-site{display:block;}
+#portal{display:none;}
+
+/* ═══ NAVBAR ═══ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:66px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 6%;
+  background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow 0.3s;
+}
+.nav.up{box-shadow:var(--shadow2);}
+.nav-logo{display:flex;flex-direction:column;line-height:1;}
+.nav-logo-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;color:var(--blue);letter-spacing:-0.2px;}
+.nav-logo-sub{font-size:0.58rem;font-weight:600;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase;margin-top:2px;}
+.nav-links{display:flex;align-items:center;gap:0.2rem;}
+.nl{color:var(--text2);text-decoration:none;font-size:0.84rem;font-weight:500;padding:0.42rem 0.85rem;border-radius:6px;transition:all 0.2s;}
+.nl:hover{background:var(--blue-lt);color:var(--blue);}
+.nb-o{border:1.5px solid var(--blue);color:var(--blue);background:transparent;padding:0.42rem 1.1rem;border-radius:6px;font-size:0.84rem;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.2s;}
+.nb-o:hover{background:var(--blue);color:var(--white);}
+.nb-s{background:var(--blue);color:var(--white);padding:0.45rem 1.2rem;border-radius:6px;font-size:0.84rem;font-weight:700;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 12px rgba(20,71,230,0.22);}
+.nb-s:hover{background:var(--blue2);transform:translateY(-1px);box-shadow:0 4px 18px rgba(20,71,230,0.32);}
+
+/* ═══ HERO ═══ */
+.hero{
+  min-height:100vh;background:var(--white);
+  padding:66px 6% 0;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;pointer-events:none;}
+.hero-bg-blob{
+  position:absolute;top:-120px;right:-120px;
+  width:600px;height:600px;
+  background:radial-gradient(ellipse,rgba(20,71,230,0.055) 0%,transparent 65%);
+  border-radius:50%;
+}
+.hero-bg-blob2{
+  position:absolute;bottom:-80px;left:-80px;
+  width:420px;height:420px;
+  background:radial-gradient(ellipse,rgba(20,71,230,0.035) 0%,transparent 65%);
+  border-radius:50%;
+}
+.hero-dots{
+  position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(20,71,230,0.07) 1px,transparent 1px);
+  background-size:30px 30px;
+  mask-image:radial-gradient(ellipse 70% 70% at 75% 25%,black 30%,transparent 70%);
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.15fr 0.85fr;
+  gap:3.5rem;align-items:center;width:100%;
+  position:relative;z-index:1;padding:3rem 0;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:0.45rem;
+  background:var(--blue-lt);color:var(--blue);
+  font-size:0.7rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  padding:0.35rem 0.95rem;border-radius:20px;border:1px solid var(--border2);
+  margin-bottom:1.4rem;
+  animation:fadeUp 0.55s ease both;
+}
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.5rem,4.2vw,4.2rem);font-weight:800;
+  color:var(--text);line-height:1.1;letter-spacing:-0.5px;
+  margin-bottom:1.2rem;
+  animation:fadeUp 0.55s ease 0.08s both;
+}
+.hero-h1 .blue{color:var(--blue);}
+.hero-h1 .it{font-style:italic;}
+.hero-sub{font-size:0.97rem;color:var(--text2);line-height:1.82;max-width:500px;margin-bottom:2rem;animation:fadeUp 0.55s ease 0.16s both;}
+.hero-btns{display:flex;gap:0.9rem;flex-wrap:wrap;margin-bottom:2.2rem;animation:fadeUp 0.55s ease 0.22s both;}
+.btn-p{display:inline-flex;align-items:center;gap:0.45rem;background:var(--blue);color:var(--white);padding:0.88rem 1.9rem;border-radius:8px;font-size:0.9rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.25s;box-shadow:0 3px 14px rgba(20,71,230,0.22);}
+.btn-p:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 6px 24px rgba(20,71,230,0.32);}
+.btn-s{display:inline-flex;align-items:center;gap:0.45rem;background:var(--white);color:var(--blue);padding:0.88rem 1.9rem;border-radius:8px;font-size:0.9rem;font-weight:600;text-decoration:none;border:1.5px solid var(--border2);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.25s;}
+.btn-s:hover{background:var(--blue-lt);border-color:var(--blue);transform:translateY(-2px);}
+.hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap;animation:fadeUp 0.55s ease 0.28s both;}
+.tc{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:500;color:var(--text2);}
+.tc-dot{width:18px;height:18px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:0.58rem;flex-shrink:0;}
+
+/* Hero right card */
+.hero-card{background:var(--white);border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow2);overflow:hidden;animation:fadeUp 0.65s ease 0.3s both;}
+.hc-top{background:var(--blue);padding:1.4rem 1.7rem;}
+.hc-top-t{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:white;margin-bottom:0.18rem;}
+.hc-top-s{font-size:0.75rem;color:rgba(255,255,255,0.65);}
+.hc-stats{display:grid;grid-template-columns:1fr 1fr;}
+.hcs{padding:1.2rem 1.4rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;transition:background 0.2s;}
+.hcs:hover{background:var(--blue-lt);}
+.hcs:nth-child(2n){border-right:none;}
+.hcs:nth-child(3),.hcs:nth-child(4){border-bottom:none;}
+.hcs-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:800;color:var(--blue);}
+.hcs-l{font-size:0.7rem;color:var(--muted);margin-top:0.2rem;font-weight:500;}
+.hc-info{padding:1rem 1.4rem;background:var(--blue-lt);border-top:1px solid var(--border2);display:flex;flex-direction:column;gap:0.45rem;}
+.hci{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--text2);font-weight:500;}
+
+/* ═══ TICKER ═══ */
+.ticker{background:var(--blue);padding:0.75rem 0;overflow:hidden;}
+.ticker-t{display:flex;gap:2.5rem;white-space:nowrap;animation:tick 28s linear infinite;}
+.ticker-t:hover{animation-play-state:paused;}
+.ti{color:rgba(255,255,255,0.9);font-size:0.8rem;font-weight:500;display:flex;align-items:center;gap:0.45rem;}
+.ti-sep{color:rgba(255,255,255,0.3);font-size:0.8rem;}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══ SECTION BASE ═══ */
+.sec{padding:5rem 6%;}
+.sec-alt{padding:5rem 6%;background:var(--off);}
+.sec-blue{padding:5rem 6%;background:var(--blue);}
+.sec-hdr{text-align:center;max-width:600px;margin:0 auto 3.2rem;}
+.sec-badge{display:inline-block;background:var(--blue-lt);color:var(--blue);font-size:0.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.3rem 0.88rem;border-radius:20px;border:1px solid var(--border2);margin-bottom:0.85rem;}
+.sec-badge-w{display:inline-block;background:rgba(255,255,255,0.12);color:white;font-size:0.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.3rem 0.88rem;border-radius:20px;margin-bottom:0.85rem;}
+.sec-t{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,3vw,2.45rem);font-weight:800;color:var(--text);line-height:1.18;letter-spacing:-0.3px;margin-bottom:0.75rem;}
+.sec-t-w{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,3vw,2.45rem);font-weight:800;color:white;line-height:1.18;letter-spacing:-0.3px;margin-bottom:0.75rem;}
+.sec-d{font-size:0.93rem;color:var(--muted);line-height:1.75;}
+.sec-d-w{font-size:0.93rem;color:rgba(255,255,255,0.65);line-height:1.75;}
+.line{width:44px;height:3px;background:var(--blue);border-radius:2px;margin:0.85rem auto 0;}
+.line-w{width:44px;height:3px;background:rgba(255,255,255,0.45);border-radius:2px;margin:0.85rem auto 0;}
+
+/* ═══ ABOUT ═══ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.about-visual{display:flex;flex-direction:column;gap:1rem;}
+.about-main{background:var(--blue);border-radius:16px;padding:2.3rem;position:relative;overflow:hidden;}
+.about-main::before{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;background:rgba(255,255,255,0.06);border-radius:50%;}
+.about-main::after{content:'';position:absolute;bottom:-40px;left:-40px;width:140px;height:140px;background:rgba(255,255,255,0.04);border-radius:50%;}
+.am-icon{font-size:3rem;margin-bottom:1rem;display:block;position:relative;z-index:1;}
+.am-t{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;color:white;margin-bottom:0.4rem;position:relative;z-index:1;}
+.am-d{font-size:0.86rem;color:rgba(255,255,255,0.72);line-height:1.7;position:relative;z-index:1;}
+.about-mini{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;}
+.am-card{background:var(--white);border-radius:10px;padding:1.1rem;border:1px solid var(--border);box-shadow:var(--shadow);text-align:center;transition:all 0.25s;}
+.am-card:hover{transform:translateY(-3px);box-shadow:var(--shadow2);border-color:var(--border2);}
+.am-num{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:800;color:var(--blue);}
+.am-lbl{font-size:0.7rem;color:var(--muted);font-weight:500;margin-top:0.18rem;}
+.about-text{}
+.at-title{font-family:'Playfair Display',serif;font-size:clamp(1.65rem,2.8vw,2.2rem);font-weight:800;color:var(--text);line-height:1.18;margin-bottom:0.4rem;}
+.at-line{width:44px;height:3px;background:var(--blue);border-radius:2px;margin-bottom:1.3rem;}
+.at-p{font-size:0.93rem;color:var(--text2);line-height:1.82;margin-bottom:0.85rem;}
+.at-list{list-style:none;display:flex;flex-direction:column;gap:0.65rem;margin:1.1rem 0;}
+.at-li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.88rem;color:var(--text2);line-height:1.5;}
+.at-chk{width:19px;height:19px;min-width:19px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:0.58rem;margin-top:1px;}
+.owner-bar{background:var(--blue-lt);border:1px solid var(--border2);border-radius:10px;padding:1.1rem 1.3rem;display:flex;align-items:center;gap:1rem;margin-top:1.5rem;}
+.ow-av{width:46px;height:46px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:800;color:white;flex-shrink:0;}
+.ow-name{font-size:0.93rem;font-weight:700;color:var(--text);}
+.ow-role{font-size:0.75rem;color:var(--muted);margin-top:0.15rem;}
+
+/* ═══ SERVICES ═══ */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem;}
+.sc{
+  background:var(--white);border-radius:var(--r);padding:2rem;
+  border:1.5px solid var(--border);box-shadow:var(--shadow);
+  transition:all 0.3s;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:0;
+}
+.sc::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--blue),#60a5fa);
+  transform:scaleX(0);transform-origin:left;transition:transform 0.35s;
+}
+.sc:hover{transform:translateY(-6px);box-shadow:var(--shadow2);border-color:var(--border2);}
+.sc:hover::before{transform:scaleX(1);}
+.sc-ico{
+  width:52px;height:52px;background:var(--blue-lt);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin-bottom:1.1rem;transition:all 0.3s;
+  border:1.5px solid var(--border2);
+}
+.sc:hover .sc-ico{background:var(--blue);border-color:var(--blue);transform:scale(1.08);}
+.sc-t{font-size:1rem;font-weight:800;color:var(--text);margin-bottom:0.5rem;letter-spacing:-0.2px;}
+.sc-d{font-size:0.84rem;color:var(--muted);line-height:1.68;flex:1;}
+.sc-arrow{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.75rem;font-weight:700;color:var(--blue);margin-top:1rem;opacity:0;transform:translateX(-4px);transition:all 0.25s;}
+.sc:hover .sc-arrow{opacity:1;transform:translateX(0);}
+
+/* ═══ WHY ═══ */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.why-list{display:flex;flex-direction:column;gap:0.9rem;}
+.wi{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem;background:rgba(255,255,255,0.09);border-radius:10px;border:1px solid rgba(255,255,255,0.14);transition:all 0.2s;}
+.wi:hover{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.28);transform:translateX(4px);}
+.wi-ico{width:34px;height:34px;min-width:34px;background:rgba(255,255,255,0.14);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.95rem;}
+.wi-t strong{display:block;color:white;font-size:0.88rem;font-weight:600;margin-bottom:0.22rem;}
+.wi-t span{color:rgba(255,255,255,0.6);font-size:0.8rem;line-height:1.5;}
+.testi-col{display:flex;flex-direction:column;gap:1.1rem;}
+.tc-card{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.14);border-radius:var(--r);padding:1.6rem;transition:all 0.2s;}
+.tc-card:hover{background:rgba(255,255,255,0.14);transform:translateY(-3px);}
+.tc-stars{color:#fbbf24;font-size:0.78rem;margin-bottom:0.8rem;letter-spacing:1px;}
+.tc-text{font-size:0.86rem;color:rgba(255,255,255,0.85);line-height:1.72;font-style:italic;margin-bottom:1rem;}
+.tc-auth{display:flex;align-items:center;gap:0.75rem;}
+.tc-av{width:35px;height:35px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:800;font-size:0.88rem;color:var(--blue);}
+.tc-name{font-size:0.82rem;font-weight:600;color:white;}
+.tc-role{font-size:0.7rem;color:rgba(255,255,255,0.48);}
+
+/* ═══ BLOG ═══ */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:1.4rem;}
+.bc{background:var(--white);border-radius:var(--r);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);transition:all 0.3s;cursor:pointer;}
+.bc:hover{transform:translateY(-5px);box-shadow:var(--shadow2);border-color:var(--border2);}
+.bc-img{height:168px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative;}
+.bi1{background:linear-gradient(135deg,#1447e6,#3b82f6);}
+.bi2{background:linear-gradient(135deg,#0f172a,#1447e6);}
+.bi3{background:linear-gradient(135deg,#1d4ed8,#60a5fa);}
+.bi4{background:linear-gradient(135deg,#1e40af,#2563eb);}
+.bi5{background:linear-gradient(135deg,#1e3a8a,#1447e6);}
+.bi6{background:linear-gradient(135deg,#172554,#1d4ed8);}
+.bc-badge{position:absolute;top:0.75rem;left:0.75rem;background:white;color:var(--blue);font-size:0.63rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.2rem 0.62rem;border-radius:20px;}
+.bc-body{padding:1.25rem;}
+.bc-meta{display:flex;align-items:center;gap:0.5rem;font-size:0.68rem;color:var(--muted);margin-bottom:0.55rem;}
+.bdot{width:3px;height:3px;background:var(--muted);border-radius:50%;}
+.bc-t{font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.33;margin-bottom:0.5rem;transition:color 0.2s;}
+.bc:hover .bc-t{color:var(--blue);}
+.bc-ex{font-size:0.79rem;color:var(--muted);line-height:1.62;margin-bottom:0.85rem;}
+.bc-link{font-size:0.76rem;font-weight:700;color:var(--blue);}
+.blog-cta{background:var(--blue-lt);border:1px solid var(--border2);border-radius:var(--r);padding:2.2rem;text-align:center;margin-top:2.2rem;}
+.blog-cta h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;color:var(--text);margin-bottom:0.45rem;}
+.blog-cta p{font-size:0.86rem;color:var(--muted);margin-bottom:1.1rem;}
+
+/* Blog modal */
+.bmo{display:none;position:fixed;inset:0;z-index:450;background:rgba(15,23,42,0.72);backdrop-filter:blur(8px);overflow-y:auto;padding:2rem;justify-content:center;}
+.bmo.open{display:flex;}
+.bm{background:white;border-radius:16px;max-width:680px;width:100%;margin:auto;overflow:hidden;animation:scaleIn 0.28s ease;}
+.bm-img{height:210px;display:flex;align-items:center;justify-content:center;font-size:3.8rem;position:relative;}
+.bm-body{padding:2.1rem;}
+.bm-badge{display:inline-block;background:var(--blue-lt);color:var(--blue);font-size:0.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.24rem 0.72rem;border-radius:20px;border:1px solid var(--border2);margin-bottom:0.85rem;}
+.bm-title{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:800;color:var(--text);line-height:1.22;margin-bottom:0.55rem;}
+.bm-meta{font-size:0.76rem;color:var(--muted);margin-bottom:1.3rem;}
+.bm-content{font-size:0.9rem;color:var(--text2);line-height:1.85;}
+.bm-content h3{font-family:'Playfair Display',serif;font-size:1.02rem;font-weight:800;color:var(--text);margin:1.3rem 0 0.45rem;}
+.bm-content p{margin-bottom:0.82rem;}
+.bm-close{position:absolute;top:0.85rem;right:0.85rem;background:rgba(255,255,255,0.9);border:none;width:32px;height:32px;border-radius:50%;font-size:1.05rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.14);}
+
+/* ═══ CONTACT ═══ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:start;}
+.ct-title{font-family:'Playfair Display',serif;font-size:clamp(1.65rem,2.8vw,2.15rem);font-weight:800;color:var(--text);line-height:1.2;margin-bottom:0.4rem;}
+.ct-line{width:44px;height:3px;background:var(--blue);border-radius:2px;margin-bottom:1.3rem;}
+.ct-desc{font-size:0.92rem;color:var(--text2);line-height:1.8;margin-bottom:1.5rem;}
+.ci-list{display:flex;flex-direction:column;gap:1.1rem;margin-bottom:1.7rem;}
+.ci-row{display:flex;gap:0.95rem;align-items:flex-start;}
+.ci-ico{width:42px;height:42px;min-width:42px;background:var(--blue-lt);border:1px solid var(--border2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background 0.2s;}
+.ci-row:hover .ci-ico{background:var(--blue);}
+.ci-l{font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.15rem;}
+.ci-v{font-size:0.91rem;font-weight:600;color:var(--text);line-height:1.5;}
+.wa-btn{display:inline-flex;align-items:center;gap:0.55rem;background:#25d366;color:white;padding:0.88rem 1.8rem;border-radius:8px;font-size:0.9rem;font-weight:700;text-decoration:none;transition:all 0.2s;box-shadow:0 3px 14px rgba(37,211,102,0.28);}
+.wa-btn:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,0.38);}
+.form-card{background:var(--white);border-radius:16px;padding:2.1rem;border:1px solid var(--border);box-shadow:var(--shadow2);}
+.fc-t{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:800;color:var(--text);margin-bottom:1.3rem;}
+.form-stack{display:flex;flex-direction:column;gap:0.95rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.95rem;}
+.fg{display:flex;flex-direction:column;gap:0.32rem;}
+.fg label{font-size:0.71rem;font-weight:700;letter-spacing:0.5px;color:var(--text2);text-transform:uppercase;}
+.fg input,.fg select,.fg textarea{font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;padding:0.8rem 0.95rem;border:1.5px solid var(--border);border-radius:8px;background:var(--white);color:var(--text);outline:none;transition:all 0.2s;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,71,230,0.07);}
+.fg textarea{resize:vertical;min-height:95px;}
+
+/* ═══ FOOTER ═══ */
+.footer{background:var(--text);padding:2.2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;color:white;}
+.f-logo span{color:#93c5fd;}
+.f-info{font-size:0.72rem;color:rgba(255,255,255,0.38);margin-top:0.2rem;}
+.f-copy{font-size:0.74rem;color:rgba(255,255,255,0.32);}
+
+/* WhatsApp float */
+.wa-float{position:fixed;bottom:1.8rem;right:1.8rem;z-index:180;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,0.42);text-decoration:none;transition:transform 0.2s;animation:pulseWa 2.5s infinite;}
+.wa-float:hover{transform:scale(1.1);}
+@keyframes pulseWa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.42)}50%{box-shadow:0 4px 36px rgba(37,211,102,0.68)}}
+
+/* ═══ LOGIN MODAL ═══ */
+.mo{display:none;position:fixed;inset:0;z-index:500;background:rgba(15,23,42,0.78);backdrop-filter:blur(8px);align-items:center;justify-content:center;}
+.mo.active{display:flex;}
+.modal{background:white;border-radius:16px;padding:2.4rem;width:min(415px,92vw);box-shadow:0 24px 70px rgba(0,0,0,0.28);animation:scaleIn 0.28s ease;}
+.m-logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:var(--blue);margin-bottom:0.28rem;}
+.m-sub{font-size:0.82rem;color:var(--muted);margin-bottom:1.7rem;}
+.m-form{display:flex;flex-direction:column;gap:0.88rem;}
+.m-form input{font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;padding:0.8rem 0.95rem;border:1.5px solid var(--border);border-radius:8px;outline:none;transition:all 0.2s;color:var(--text);}
+.m-form input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,71,230,0.07);}
+.m-btn{background:var(--blue);color:white;border:none;border-radius:8px;padding:0.88rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;transition:background 0.2s;box-shadow:0 3px 14px rgba(20,71,230,0.22);}
+.m-btn:hover{background:var(--blue2);}
+.m-close{float:right;background:none;border:none;font-size:1.35rem;cursor:pointer;color:var(--muted);}
+.m-err{color:#dc2626;font-size:0.78rem;text-align:center;display:none;}
+.m-hint{font-size:0.73rem;color:var(--muted);text-align:center;background:var(--off);padding:0.52rem;border-radius:6px;}
+
+/* ═══ CLIENT PORTAL ═══ */
+#portal{min-height:100vh;background:#f1f5f9;display:grid;grid-template-columns:255px 1fr;grid-template-rows:58px 1fr;}
+.ph{grid-column:1/-1;background:var(--blue);display:flex;align-items:center;justify-content:space-between;padding:0 1.8rem;}
+.ph-logo{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:800;color:white;}
+.ph-logo span{color:#93c5fd;}
+.ph-r{display:flex;align-items:center;gap:1.2rem;}
+.ph-av{width:31px;height:31px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:800;font-size:0.85rem;color:var(--blue);}
+.ph-nm{font-size:0.82rem;color:rgba(255,255,255,0.9);}
+.ph-out{background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);color:white;padding:0.3rem 0.88rem;border-radius:6px;cursor:pointer;font-size:0.74rem;font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.2s;}
+.ph-out:hover{background:rgba(255,255,255,0.24);}
+.psb{background:white;padding:1.1rem 0;border-right:1px solid var(--border);box-shadow:2px 0 8px rgba(0,0,0,0.04);}
+.sb-l{font-size:0.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:0.38rem 1.3rem;margin-top:0.75rem;}
+.sb-i{display:flex;align-items:center;gap:0.7rem;padding:0.68rem 1.3rem;cursor:pointer;transition:all 0.2s;color:var(--text2);font-size:0.84rem;font-weight:500;border-left:3px solid transparent;margin:0 0.4rem 0 0;border-radius:0 6px 6px 0;}
+.sb-i:hover{background:var(--blue-lt);color:var(--blue);}
+.sb-i.on{background:var(--blue-lt);color:var(--blue);border-left-color:var(--blue);font-weight:700;}
+.si{font-size:0.92rem;width:17px;text-align:center;}
+.pm{padding:1.7rem;overflow-y:auto;}
+.ptab{display:none;}
+.ptab.on{display:block;}
+.wb{background:linear-gradient(135deg,var(--blue),var(--blue2));border-radius:var(--r);padding:1.6rem 2rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;box-shadow:0 6px 28px rgba(20,71,230,0.2);}
+.wb h2{font-family:'Playfair Display',serif;font-size:1.38rem;color:white;margin-bottom:0.18rem;}
+.wb p{font-size:0.78rem;color:rgba(255,255,255,0.68);}
+.wb-bs{display:flex;gap:0.75rem;}
+.wbb{background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);border-radius:8px;padding:0.6rem 0.95rem;text-align:center;}
+.wbb-n{font-family:'Playfair Display',serif;font-size:1.35rem;color:white;font-weight:800;line-height:1;}
+.wbb-l{font-size:0.61rem;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-top:0.18rem;}
+.dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:1.5rem;}
+.dc{background:white;border-radius:var(--r);padding:1.25rem;border:1px solid var(--border);box-shadow:var(--shadow);transition:box-shadow 0.2s;}
+.dc:hover{box-shadow:var(--shadow2);}
+.dc-ico{font-size:1.35rem;margin-bottom:0.5rem;}
+.dc-v{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--text);}
+.dc-l{font-size:0.67rem;color:var(--muted);margin-top:0.18rem;text-transform:uppercase;letter-spacing:0.7px;font-weight:500;}
+.pc{background:white;border-radius:var(--r);border:1px solid var(--border);overflow:hidden;margin-bottom:1.2rem;box-shadow:var(--shadow);}
+.pc-h{padding:0.95rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.pc-t{font-size:0.88rem;font-weight:700;color:var(--text);}
+table{width:100%;border-collapse:collapse;}
+thead th{font-size:0.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:0.8rem 1.25rem;text-align:left;background:#f8fafc;border-bottom:1px solid var(--border);}
+tbody td{padding:0.85rem 1.25rem;font-size:0.83rem;color:var(--text);border-bottom:1px solid #f1f5f9;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:#f8fafc;}
+.badge{display:inline-block;padding:0.18rem 0.62rem;border-radius:20px;font-size:0.65rem;font-weight:600;}
+.bg{background:#d1fae5;color:#065f46;}
+.by{background:#fef3c7;color:#92400e;}
+.bb{background:#dbeafe;color:#1e40af;}
+.dlb{background:var(--blue);color:white;border:none;padding:0.33rem 0.85rem;border-radius:6px;font-size:0.72rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;transition:all 0.2s;}
+.dlb:hover{background:var(--blue2);transform:translateY(-1px);}
+.dlb.out{background:white;color:var(--blue);border:1.5px solid var(--border2);}
+.dlb.out:hover{background:var(--blue-lt);}
+.uz{border:2px dashed var(--border2);border-radius:var(--r);padding:2.3rem 2rem;text-align:center;cursor:pointer;transition:all 0.2s;background:white;}
+.uz:hover,.uz.drag{border-color:var(--blue);background:var(--blue-lt);}
+.dtabs{display:flex;gap:0.45rem;margin-bottom:1.1rem;flex-wrap:wrap;}
+.dtab{padding:0.42rem 0.95rem;border-radius:20px;font-size:0.76rem;font-weight:500;cursor:pointer;border:1.5px solid var(--border);color:var(--muted);transition:all 0.2s;background:white;}
+.dtab.on{background:var(--blue);color:white;border-color:var(--blue);}
+.ulist{margin-top:0.9rem;display:flex;flex-direction:column;gap:0.6rem;}
+.ui{background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:0.78rem 1rem;display:flex;align-items:center;justify-content:space-between;}
+.ui-n{font-size:0.82rem;font-weight:500;color:var(--text);}
+.ui-s{font-size:0.68rem;color:var(--muted);}
+.ui-rm{background:none;border:none;color:#cbd5e1;cursor:pointer;font-size:1.05rem;}
+.ui-rm:hover{color:#dc2626;}
+.pay-g{display:grid;grid-template-columns:1fr 1.1fr;gap:1.6rem;align-items:start;}
+.ii{background:white;border:1.5px solid var(--border);border-radius:10px;padding:0.95rem 1.15rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.2s;margin-bottom:0.82rem;box-shadow:var(--shadow);}
+.ii:hover,.ii.sel{border-color:var(--blue);box-shadow:0 3px 14px rgba(20,71,230,0.11);}
+.ii.sel{background:var(--blue-lt);}
+.ii-n{font-size:0.68rem;color:var(--muted);}
+.ii-d{font-size:0.84rem;font-weight:700;color:var(--text);}
+.ii-dt{font-size:0.68rem;color:var(--muted);margin-top:0.13rem;}
+.ii-a{font-family:'Playfair Display',serif;font-size:1.28rem;font-weight:800;color:var(--blue);}
+.ii-sb{background:none;border:1.5px solid var(--blue);color:var(--blue);padding:0.26rem 0.72rem;border-radius:5px;font-size:0.71rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;margin-top:0.38rem;transition:all 0.2s;}
+.ii.sel .ii-sb,.ii-sb:hover{background:var(--blue);color:white;}
+.pnl{background:white;border-radius:var(--r);border:1px solid var(--border);padding:1.6rem;box-shadow:var(--shadow);}
+.pnl-t{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:1.1rem;}
+.psum{background:#f8fafc;border-radius:8px;padding:0.95rem;margin-bottom:1.1rem;border:1px solid var(--border);}
+.psr{display:flex;justify-content:space-between;font-size:0.81rem;color:var(--muted);padding:0.26rem 0;}
+.psr.tot{font-weight:700;color:var(--text);font-size:0.9rem;border-top:1px solid var(--border);margin-top:0.42rem;padding-top:0.55rem;}
+.pmethods{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.1rem;}
+.pmi{border:1.5px solid var(--border);border-radius:8px;padding:0.78rem 0.95rem;cursor:pointer;display:flex;align-items:center;gap:0.65rem;transition:all 0.2s;}
+.pmi:hover,.pmi.sel{border-color:var(--blue);background:var(--blue-lt);}
+.pm-ico{font-size:1.1rem;}
+.pm-l{font-size:0.83rem;font-weight:600;color:var(--text);}
+.pm-s{font-size:0.68rem;color:var(--muted);}
+.pm-r{width:13px;height:13px;border-radius:50%;border:2px solid #cbd5e1;margin-left:auto;}
+.pmi.sel .pm-r{border-color:var(--blue);background:var(--blue);}
+.pf{display:flex;flex-direction:column;gap:0.75rem;}
+.pf input{font-family:'Plus Jakarta Sans',sans-serif;font-size:0.87rem;padding:0.7rem 0.88rem;border:1.5px solid var(--border);border-radius:8px;outline:none;transition:border-color 0.2s;}
+.pf input:focus{border-color:var(--blue);}
+.pfr{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;}
+.pbtn{width:100%;background:var(--blue);color:white;border:none;padding:0.88rem;border-radius:8px;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;margin-top:0.85rem;transition:all 0.2s;box-shadow:0 3px 14px rgba(20,71,230,0.22);}
+.pbtn:hover{background:var(--blue2);transform:translateY(-2px);}
+.mc{display:grid;grid-template-columns:190px 1fr;min-height:390px;}
+.ms{border-right:1px solid var(--border);padding:0.85rem;background:#f8fafc;}
+.mc-cv{background:white;border-radius:8px;padding:0.72rem 0.88rem;cursor:pointer;border:1px solid var(--border);box-shadow:var(--shadow);}
+.mc-n{font-size:0.82rem;font-weight:700;color:var(--text);}
+.mc-p{font-size:0.69rem;color:var(--muted);margin-top:0.13rem;}
+.mc-t{font-size:0.63rem;color:#94a3b8;margin-top:0.13rem;}
+.mm{display:flex;flex-direction:column;}
+.mhdr{padding:0.82rem 1.25rem;border-bottom:1px solid var(--border);background:#f8fafc;}
+.mthread{flex:1;padding:1.25rem;display:flex;flex-direction:column;gap:0.85rem;overflow-y:auto;max-height:255px;}
+.msg-in{display:flex;gap:0.65rem;align-items:flex-start;}
+.msg-out{display:flex;gap:0.65rem;align-items:flex-start;justify-content:flex-end;}
+.bub-in{background:#f1f5f9;border-radius:0 10px 10px 10px;padding:0.72rem 0.95rem;max-width:70%;font-size:0.83rem;color:var(--text);}
+.bub-out{background:var(--blue);border-radius:10px 0 10px 10px;padding:0.72rem 0.95rem;max-width:70%;font-size:0.83rem;color:white;}
+.mav{width:27px;height:27px;min-width:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.68rem;}
+.mav.s{background:var(--blue);color:white;}
+.mav.c{background:var(--text);color:white;}
+.minp-bar{padding:0.85rem 1.25rem;border-top:1px solid var(--border);display:flex;gap:0.65rem;}
+.minp{flex:1;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.84rem;padding:0.6rem 0.88rem;border:1.5px solid var(--border);border-radius:8px;outline:none;}
+.minp:focus{border-color:var(--blue);}
+.pt{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:0.28rem;}
+.ps{color:var(--muted);font-size:0.81rem;margin-bottom:1.2rem;}
+
+/* TOAST */
+.toast{position:fixed;bottom:1.8rem;left:50%;transform:translateX(-50%) translateY(80px);z-index:9999;background:var(--text);color:white;padding:0.82rem 1.4rem;border-radius:8px;font-size:0.83rem;box-shadow:0 6px 28px rgba(0,0,0,0.2);transition:transform 0.3s ease;white-space:nowrap;opacity:0;}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
+.toast.ok{background:#065f46;}
+.toast.err{background:#dc2626;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
+.rev{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.rev.vis{opacity:1;transform:translateY(0);}
+.rev-l{opacity:0;transform:translateX(-28px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.rev-l.vis{opacity:1;transform:translateX(0);}
+.rev-r{opacity:0;transform:translateX(28px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.rev-r.vis{opacity:1;transform:translateX(0);}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-card{display:none;}
+  .about-grid,.why-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .testi-col .tc-card:last-child{display:none;}
+  .form-row{grid-template-columns:1fr;}
+  .nav-links .nl{display:none;}
+  .footer{flex-direction:column;text-align:center;}
+  #portal{grid-template-columns:1fr;grid-template-rows:58px auto 1fr;}
+  .psb{display:none;}
+  .pay-g{grid-template-columns:1fr;}
+  .mc{grid-template-columns:1fr;}
+  .ms{display:none;}
+}
+</style>
+</head>
+<body>
+
+<a class="wa-float" href="https://wa.me/919461437143" target="_blank" title="WhatsApp" style="bottom:5.5rem;">💬</a>
+<a href="tel:+919461437143" title="Call Now" style="position:fixed;bottom:1.8rem;right:1.8rem;z-index:180;width:54px;height:54px;background:#1447e6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 20px rgba(20,71,230,0.42);text-decoration:none;transition:transform 0.2s;">📞</a>
+
+<!-- ════════════════ PUBLIC SITE ════════════════ -->
+<div id="public-site">
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <svg width="160" height="42" viewBox="0 0 160 42" xmlns="http://www.w3.org/2000/svg">
+      <!-- Icon box with gradient -->
+      <defs>
+        <linearGradient id="vkgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1447e6"/>
+          <stop offset="100%" style="stop-color:#1d4ed8"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="1" width="40" height="40" rx="9" fill="url(#vkgrad)"/>
+      <!-- V shape -->
+      <polyline points="9,12 20,30 31,12" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- K lines -->
+      <!-- Brand text -->
+      <text x="50" y="17" font-family="Georgia,serif" font-size="14.5" font-weight="800" fill="#0f172a" letter-spacing="-0.4">VijayKant</text>
+      <text x="50" y="34" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-size="9.5" font-weight="700" fill="#1447e6" letter-spacing="2.5">TAX &amp; ACCOUNTING</text>
+    </svg>
+  </div>
+  <div class="nav-links">
+    <a href="#about" class="nl">About</a>
+    <a href="#services" class="nl">Services</a>
+    <a href="#blog" class="nl">Blog</a>
+    <a href="#contact" class="nl">Contact</a>
+    <a href="tel:+919461437143" class="nb-s" style="background:#25d366;">📞 Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-blob"></div>
+    <div class="hero-bg-blob2"></div>
+    <div class="hero-dots"></div>
+  </div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">🏆 Jodhpur's Trusted Tax Consultant Since 2009</div>
+      <h1 class="hero-h1">Expert Tax &amp;<br><span class="blue">Accounting</span><br><span class="it">Services</span></h1>
+      <p class="hero-sub">Vijay Kant Accounting &amp; Tax Services — complete tax and compliance solutions under one roof in Jodhpur, Rajasthan.</p>
+      <!-- PRICING PILLS -->
+      <div style="display:flex;gap:0.65rem;flex-wrap:wrap;margin-bottom:1.5rem;animation:fadeUp 0.55s ease 0.18s both;">
+        <div style="background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:0.5rem 1rem;display:flex;flex-direction:column;">
+          <span style="font-size:0.65rem;font-weight:700;letter-spacing:1px;color:#64748b;text-transform:uppercase;">ITR Filing</span>
+          <span style="font-size:1.1rem;font-weight:800;color:#1447e6;">Starts ₹499</span>
+        </div>
+        <div style="background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:0.5rem 1rem;display:flex;flex-direction:column;">
+          <span style="font-size:0.65rem;font-weight:700;letter-spacing:1px;color:#64748b;text-transform:uppercase;">GST Return</span>
+          <span style="font-size:1.1rem;font-weight:800;color:#1447e6;">₹999/month</span>
+        </div>
+        <div style="background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:0.5rem 1rem;display:flex;flex-direction:column;">
+          <span style="font-size:0.65rem;font-weight:700;letter-spacing:1px;color:#64748b;text-transform:uppercase;">PAN Card</span>
+          <span style="font-size:1.1rem;font-weight:800;color:#1447e6;">₹199 only</span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="https://wa.me/919461437143" class="btn-p" target="_blank">💬 WhatsApp Now</a>
+        <a href="tel:+919461437143" class="btn-s">📞 Call Now</a>
+      </div>
+      <div class="hero-trust">
+        <div class="tc"><div class="tc-dot">✓</div>15+ Years Experience</div>
+        <div class="tc"><div class="tc-dot">✓</div>5,000+ Clients</div>
+        <div class="tc"><div class="tc-dot">✓</div>Zero Penalties</div>
+        <div class="tc"><div class="tc-dot">✓</div>100% Accurate Filing</div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="hc-top">
+          <div class="hc-top-t">Vijay Kant Tax Services</div>
+          <div class="hc-top-s">Jodhpur, Rajasthan — Est. 2009</div>
+        </div>
+        <div class="hc-stats">
+          <div class="hcs"><div class="hcs-n">15+</div><div class="hcs-l">Years Exp.</div></div>
+          <div class="hcs"><div class="hcs-n">5,000+</div><div class="hcs-l">Clients</div></div>
+          <div class="hcs"><div class="hcs-n">10+</div><div class="hcs-l">Services</div></div>
+          <div class="hcs"><div class="hcs-n">100%</div><div class="hcs-l">Compliance</div></div>
+        </div>
+        <div class="hc-info">
+          <div class="hci">📞 +91 9461437143</div>
+          <div class="hci">✉ jangidvijaykant@gmail.com</div>
+          <div class="hci">📍 86, Salawas Road, Jodhpur</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-t">
+    <div class="ti"><span>✦</span> ITR Filing</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> GST Registration &amp; Returns</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> PAN Card Services</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> MSME / Udyam Registration</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> FSSAI License</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Trademark Registration</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Import Export Code</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Accounting &amp; Bookkeeping</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> TDS Return Filing</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Project Report &amp; Loan File</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> ITR Filing</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> GST Registration &amp; Returns</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> PAN Card Services</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> MSME / Udyam Registration</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> FSSAI License</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Trademark Registration</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Import Export Code</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Accounting &amp; Bookkeeping</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> TDS Return Filing</div><div class="ti-sep">|</div>
+    <div class="ti"><span>✦</span> Project Report &amp; Loan File</div><div class="ti-sep">|</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="about-grid">
+    <div class="about-visual rev-l">
+      <div class="about-main">
+        <span class="am-icon">🏛️</span>
+        <div class="am-t">Vijay Kant Accounting &amp; Tax Services</div>
+        <div class="am-d">A trusted tax consultancy in Jodhpur, Rajasthan — serving individuals and businesses with 15+ years of professional experience.</div>
+      </div>
+      <div class="about-mini">
+        <div class="am-card"><div class="am-num">15+</div><div class="am-lbl">Years</div></div>
+        <div class="am-card"><div class="am-num">5,000+</div><div class="am-lbl">Clients</div></div>
+        <div class="am-card"><div class="am-num">10+</div><div class="am-lbl">Services</div></div>
+        <div class="am-card"><div class="am-num">Zero</div><div class="am-lbl">Penalties</div></div>
+      </div>
+    </div>
+    <div class="about-text rev-r">
+      <div class="sec-badge">About Us</div>
+      <h2 class="at-title">Your Trusted Tax Partner in Jodhpur</h2>
+      <div class="at-line"></div>
+      <p class="at-p"><strong>Vijay Kant Accounting &amp; Tax Services</strong> is a leading tax consultancy firm based in Jodhpur, Rajasthan. Founded by <strong>Mr. Vijay Kant Jangid</strong>, we have been serving thousands of individuals, salaried professionals, business owners, and MSMEs with accurate, timely, and affordable financial services for over 15 years.</p>
+      <p class="at-p">Our goal is simple — make taxation easy, transparent, and stress-free for every client. Whether you are a first-time ITR filer or a growing business needing complete compliance support, we are here to help.</p>
+      <ul class="at-list">
+        <li><div class="at-chk">✓</div>Experienced and certified tax professionals</li>
+        <li><div class="at-chk">✓</div>Transparent pricing — no hidden charges</li>
+        <li><div class="at-chk">✓</div>Pan India digital services — work from home</li>
+        <li><div class="at-chk">✓</div>Fast 24–48 hour processing turnaround</li>
+        <li><div class="at-chk">✓</div>Expert guidance on all government schemes</li>
+      </ul>
+      <div class="owner-bar">
+        <div class="ow-av">VK</div>
+        <div>
+          <div class="ow-name">Vijay Kant Jangid</div>
+          <div class="ow-role">Founder &amp; Senior Tax Consultant | +91 9461437143</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec-alt" id="services" style="background:#f0f4ff;">
+  <div class="sec-hdr">
+    <div class="sec-badge">What We Offer</div>
+    <h2 class="sec-t rev">Our Complete Services</h2>
+    <div class="line"></div>
+    <p class="sec-d rev" style="margin:0 auto;">All your tax and compliance needs handled under one roof — from ITR filing to bank loans. Click any service to know more.</p>
+  </div>
+  <div class="svc-grid rev">
+    <div class="sc" onclick="openSvc(0)" style="cursor:pointer;"><div class="sc-ico">📋</div><div class="sc-t">ITR Filing</div><div class="sc-d">Income tax return filing for salaried individuals, business owners, HUFs, and firms. All ITR forms covered including ITR-1, ITR-2, ITR-3, and ITR-4.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(1)" style="cursor:pointer;"><div class="sc-ico">🏢</div><div class="sc-t">GST Registration &amp; Returns</div><div class="sc-d">New GST registration, GSTR-1, GSTR-3B, GSTR-9 annual returns, reconciliation, and complete GST advisory services.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(2)" style="cursor:pointer;"><div class="sc-ico">🪪</div><div class="sc-t">PAN Card Services</div><div class="sc-d">New PAN card application, correction and update of existing PAN details, and duplicate PAN card — all processed online.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(3)" style="cursor:pointer;"><div class="sc-ico">🏭</div><div class="sc-t">MSME / Udyam Registration</div><div class="sc-d">Register your business on the Udyam portal to access government benefits, priority loans, and subsidies.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(4)" style="cursor:pointer;"><div class="sc-ico">🍽️</div><div class="sc-t">FSSAI License</div><div class="sc-d">Food Safety and Standards license registration and renewal for restaurants, food businesses, and manufacturers.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(5)" style="cursor:pointer;"><div class="sc-ico">™️</div><div class="sc-t">Trademark Registration</div><div class="sc-d">Protect your brand name, logo, and business identity with trademark registration across all product and service classes.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(6)" style="cursor:pointer;"><div class="sc-ico">🚢</div><div class="sc-t">Import Export Code (IEC)</div><div class="sc-d">Mandatory IEC registration for all businesses importing or exporting goods and services from India.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(7)" style="cursor:pointer;"><div class="sc-ico">📊</div><div class="sc-t">Accounting &amp; Bookkeeping</div><div class="sc-d">Complete daily bookkeeping, ledger maintenance, profit &amp; loss statements, and balance sheet preparation.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(8)" style="cursor:pointer;"><div class="sc-ico">📄</div><div class="sc-t">TDS Return Filing</div><div class="sc-d">Quarterly TDS returns (24Q, 26Q), Form 16 and Form 16A generation, and complete TDS compliance management.</div><div class="sc-arrow">View Details →</div></div>
+    <div class="sc" onclick="openSvc(9)" style="cursor:pointer;"><div class="sc-ico">🏦</div><div class="sc-t">Project Report &amp; Loan File</div><div class="sc-d">Professional project reports for bank loans, MUDRA, PMEGP, and all other government loan schemes.</div><div class="sc-arrow">View Details →</div></div>
+  </div>
+
+<!-- SERVICE DETAIL MODAL -->
+<div id="svc-modal" style="display:none;position:fixed;inset:0;z-index:460;background:rgba(15,23,42,0.72);backdrop-filter:blur(8px);overflow-y:auto;padding:2rem;align-items:flex-start;justify-content:center;">
+  <div style="background:white;border-radius:16px;max-width:680px;width:100%;margin:2rem auto;overflow:hidden;animation:scaleIn 0.28s ease;position:relative;">
+    <div id="svc-modal-header" style="background:var(--blue);padding:2rem 2.2rem;position:relative;">
+      <div style="font-size:3rem;margin-bottom:0.8rem;" id="svc-modal-ico"></div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:white;margin-bottom:0.3rem;" id="svc-modal-title"></div>
+      <div style="font-size:0.84rem;color:rgba(255,255,255,0.65);" id="svc-modal-tag"></div>
+      <button onclick="closeSvc()" style="position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.15);border:none;width:34px;height:34px;border-radius:50%;font-size:1.1rem;cursor:pointer;color:white;display:flex;align-items:center;justify-content:center;">×</button>
+    </div>
+    <div style="padding:2rem 2.2rem;">
+      <div id="svc-modal-body" style="font-size:0.92rem;color:#334155;line-height:1.85;"></div>
+      <div style="margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid #e2e8f0;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/919461437143" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;background:#25d366;color:white;padding:0.82rem 1.6rem;border-radius:8px;font-size:0.88rem;font-weight:700;text-decoration:none;">💬 WhatsApp Now</a>
+        <a href="#contact" onclick="closeSvc()" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue);color:white;padding:0.82rem 1.6rem;border-radius:8px;font-size:0.88rem;font-weight:700;text-decoration:none;">📋 Send Enquiry</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- WHY US -->
+<section class="sec-blue" id="why">
+  <div class="sec-hdr">
+    <div class="sec-badge-w">Why Choose Us</div>
+    <h2 class="sec-t-w rev">Why Thousands Trust Us</h2>
+    <div class="line-w"></div>
+    <p class="sec-d-w rev">Reliable, accurate, and affordable — here is why clients stay with us year after year.</p>
+  </div>
+  <div class="why-grid">
+    <ul class="why-list rev-l">
+      <li class="wi"><div class="wi-ico">🏆</div><div class="wi-t"><strong>15+ Years of Proven Experience</strong><span>Deep expertise across income tax, GST, MSME, and all financial compliance areas.</span></div></li>
+      <li class="wi"><div class="wi-ico">💰</div><div class="wi-t"><strong>Transparent &amp; Affordable Pricing</strong><span>No hidden charges. Clear pricing discussed upfront before any work begins.</span></div></li>
+      <li class="wi"><div class="wi-ico">⚡</div><div class="wi-t"><strong>Fast 24–48 Hour Turnaround</strong><span>Most services are completed within 24–48 hours of receiving your documents.</span></div></li>
+      <li class="wi"><div class="wi-ico">🔐</div><div class="wi-t"><strong>Secure Online Client Portal</strong><span>Upload documents, download returns, and pay invoices — all from one secure place.</span></div></li>
+      <li class="wi"><div class="wi-ico">🌍</div><div class="wi-t"><strong>Pan India Digital Service</strong><span>Based in Jodhpur but serving clients across India — fully online process available.</span></div></li>
+    </ul>
+    <div class="testi-col rev-r">
+      <div class="tc-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.6rem;">
+          <div class="tc-stars">★★★★★</div>
+          <div style="background:rgba(255,255,255,0.15);border-radius:4px;padding:0.2rem 0.5rem;font-size:0.65rem;color:rgba(255,255,255,0.7);font-weight:600;">Google Review</div>
+        </div>
+        <div class="tc-text">"Vijay Kant ji ne hamare business ka GST registration aur monthly return filing ka poora kaam sambhala hai. 3 saal se inke saath hain — kabhi ek bhi penalty nahi aayi. Bahut hi professional aur trustworthy hain."</div>
+        <div class="tc-auth"><div class="tc-av">M</div><div><div class="tc-name">Mahesh Kumawat</div><div class="tc-role">Kirana Store Owner, Jodhpur</div></div></div>
+      </div>
+      <div class="tc-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.6rem;">
+          <div class="tc-stars">★★★★★</div>
+          <div style="background:rgba(255,255,255,0.15);border-radius:4px;padding:0.2rem 0.5rem;font-size:0.65rem;color:rgba(255,255,255,0.7);font-weight:600;">Google Review</div>
+        </div>
+        <div class="tc-text">"ITR filing, PAN card aur MSME registration — teeno kaam ek hi jagah ho gaye. Fees bhi bilkul reasonable thi. WhatsApp pe contact kiya aur 2 din mein kaam complete. Highly recommended!"</div>
+        <div class="tc-auth"><div class="tc-av">P</div><div><div class="tc-name">Priya Vaishnav</div><div class="tc-role">Home Baker, Jodhpur</div></div></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:white;line-height:1;">4.9 ★</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.55);margin-top:0.2rem;">Based on 120+ Google Reviews</div>
+        </div>
+        <a href="https://g.page/r/vijaykanttax/review" target="_blank" style="background:white;color:#1447e6;padding:0.6rem 1.2rem;border-radius:6px;font-size:0.8rem;font-weight:700;text-decoration:none;">Write a Review →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="sec" id="blog">
+  <div class="sec-hdr">
+    <div class="sec-badge">Knowledge Hub</div>
+    <h2 class="sec-t rev">Tax Updates &amp; Articles</h2>
+    <div class="line"></div>
+    <p class="sec-d rev">Stay informed with the latest tax laws, GST notifications, and financial planning tips from our experts.</p>
+  </div>
+  <div class="blog-grid rev">
+    <div class="bc" onclick="openBlog(0)"><div class="bc-img bi1"><span>📋</span><span class="bc-badge">ITR</span></div><div class="bc-body"><div class="bc-meta"><span>VK Jangid</span><span class="bdot"></span><span>28 Feb 2024</span><span class="bdot"></span><span>5 min read</span></div><div class="bc-t">New ITR Forms for FY 2023-24: What Changed?</div><div class="bc-ex">CBDT released updated ITR forms with key changes — new tax regime now default, VDA disclosures mandatory.</div><div class="bc-link">Read Article →</div></div></div>
+    <div class="bc" onclick="openBlog(1)"><div class="bc-img bi2"><span>🏢</span><span class="bc-badge">GST</span></div><div class="bc-body"><div class="bc-meta"><span>VK Jangid</span><span class="bdot"></span><span>20 Feb 2024</span><span class="bdot"></span><span>4 min read</span></div><div class="bc-t">GST Council 53rd Meeting: Key Changes for Businesses</div><div class="bc-ex">Rate changes, penalty waivers, and compliance relaxations — here is everything that affects your business.</div><div class="bc-link">Read Article →</div></div></div>
+    <div class="bc" onclick="openBlog(2)"><div class="bc-img bi3"><span>💰</span><span class="bc-badge">Tax Planning</span></div><div class="bc-body"><div class="bc-meta"><span>VK Jangid</span><span class="bdot"></span><span>15 Feb 2024</span><span class="bdot"></span><span>6 min read</span></div><div class="bc-t">10 Smart Ways to Reduce Your Tax Liability</div><div class="bc-ex">Legal and proven tax-saving strategies using Section 80C, 80D, HRA, NPS, and more for FY 2024-25.</div><div class="bc-link">Read Article →</div></div></div>
+    <div class="bc" onclick="openBlog(3)"><div class="bc-img bi4"><span>🏭</span><span class="bc-badge">MSME</span></div><div class="bc-body"><div class="bc-meta"><span>VK Jangid</span><span class="bdot"></span><span>10 Feb 2024</span><span class="bdot"></span><span>3 min read</span></div><div class="bc-t">Udyam Registration Benefits — Why Every Business Should Register</div><div class="bc-ex">MSME/Udyam certification unlocks government loans, subsidies, and priority access to tenders.</div><div class="bc-link">Read Article →</div></div></div>
+    <div class="bc" onclick="openBlog(4)"><div class="bc-img bi5"><span>🏦</span><span class="bc-badge">Loans</span></div><div class="bc-body"><div class="bc-meta"><span>VK Jangid</span><span class="bdot"></span><span>5 Feb 2024</span><span class="bdot"></span><span>5 min read</span></div><div class="bc-t">How to Get a MUDRA Loan — Step by Step Guide</div><div class="bc-ex">Under PMMY, businesses can get up to ₹10 lakh collateral-free. Here is the complete application process.</div><div class="bc-link">Read Article →</div></div></div>
+    <div class="bc" onclick="openBlog(5)"><div class="bc-img bi6"><span>⚖️</span><span class="bc-badge">Compliance</span></div><div class="bc-body"><div class="bc-meta"><span>VK Jangid</span><span class="bdot"></span><span>1 Feb 2024</span><span class="bdot"></span><span>4 min read</span></div><div class="bc-t">Late GST Filing Penalties — How to Avoid Them</div><div class="bc-ex">Late GST returns attract heavy daily penalties and 18% interest. Know the structure and how to stay compliant.</div><div class="bc-link">Read Article →</div></div></div>
+  </div>
+  <div class="blog-cta rev">
+    <h3>Have a Tax Question?</h3>
+    <p>Get a free consultation from our expert team — no obligations.</p>
+    <a href="https://wa.me/919461437143" class="btn-p" target="_blank" style="display:inline-flex;">💬 WhatsApp Us Now</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec-alt" id="contact">
+  <div class="contact-grid">
+    <div class="rev-l">
+      <div class="sec-badge">Get In Touch</div>
+      <h2 class="ct-title">Contact Us Today</h2>
+      <div class="ct-line"></div>
+      <p class="ct-desc">Book a free 30-minute consultation. We are available Monday to Saturday, 9 AM to 7 PM. Call, WhatsApp, or fill the form — we will get back to you promptly.</p>
+      <div class="ci-list">
+        <div class="ci-row"><div class="ci-ico">📞</div><div><div class="ci-l">Phone / WhatsApp</div><div class="ci-v"><a href="tel:+919461437143" style="color:inherit;text-decoration:none;">+91 9461437143</a></div></div></div>
+        <div class="ci-row"><div class="ci-ico">✉️</div><div><div class="ci-l">Email Address</div><div class="ci-v"><a href="mailto:jangidvijaykant@gmail.com" style="color:inherit;text-decoration:none;">jangidvijaykant@gmail.com</a></div></div></div>
+        <div class="ci-row"><div class="ci-ico">🌐</div><div><div class="ci-l">Website</div><div class="ci-v">www.vijaykanttax.com</div></div></div>
+        <div class="ci-row"><div class="ci-ico">📍</div><div><div class="ci-l">Office Address</div><div class="ci-v">86, Behind Sangriya Dharmkanta,<br>Salawas Road, Jodhpur, Rajasthan</div></div></div>
+        <div class="ci-row"><div class="ci-ico">🕐</div><div><div class="ci-l">Working Hours</div><div class="ci-v">Monday – Saturday: 9:00 AM – 7:00 PM</div></div></div>
+      </div>
+      <!-- Call + WhatsApp buttons -->
+      <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+        <a href="tel:+919461437143" style="display:inline-flex;align-items:center;gap:0.55rem;background:#1447e6;color:white;padding:0.85rem 1.6rem;border-radius:8px;font-size:0.9rem;font-weight:700;text-decoration:none;box-shadow:0 3px 14px rgba(20,71,230,0.22);transition:all 0.2s;">📞 Call Now</a>
+        <a href="https://wa.me/919461437143" class="wa-btn" target="_blank" style="margin-top:0;">💬 WhatsApp</a>
+      </div>
+      <!-- Google Map -->
+      <div style="border-radius:12px;overflow:hidden;border:1.5px solid #e2e8f0;box-shadow:0 2px 16px rgba(20,71,230,0.07);">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.7!2d73.0243!3d26.2389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE0JzIwLjAiTiA3M8KwMDEnMjcuNSJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
+          width="100%" height="200" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Vijay Kant Tax Services Location — Salawas Road, Jodhpur">
+        </iframe>
+        <div style="background:#f8faff;padding:0.7rem 1rem;display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:0.78rem;color:#334155;font-weight:500;">📍 86, Salawas Road, Jodhpur, Rajasthan</span>
+          <a href="https://maps.google.com/?q=Salawas+Road+Jodhpur+Rajasthan" target="_blank" style="font-size:0.75rem;font-weight:700;color:#1447e6;text-decoration:none;">Open in Maps →</a>
+        </div>
+      </div>
+    </div>
+    <div class="rev-r">
+      <div class="form-card">
+        <div class="fc-t">Send an Enquiry</div>
+        <div class="form-stack">
+          <div class="form-row">
+            <div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+            <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210"></div>
+          </div>
+          <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+          <div class="fg"><label>Service Required</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>ITR Filing</option>
+              <option>GST Registration / Returns</option>
+              <option>PAN Card</option>
+              <option>MSME / Udyam Registration</option>
+              <option>FSSAI License</option>
+              <option>Trademark Registration</option>
+              <option>Import Export Code (IEC)</option>
+              <option>Accounting &amp; Bookkeeping</option>
+              <option>TDS Return Filing</option>
+              <option>Project Report / Loan File</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea placeholder="Tell us about your requirements..."></textarea></div>
+          <button class="btn-p" onclick="handleContact(this)" style="width:100%;justify-content:center;padding:1rem;">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy Policy Modal -->
+<div id="pp-modal" style="display:none;position:fixed;inset:0;z-index:460;background:rgba(15,23,42,0.75);backdrop-filter:blur(8px);overflow-y:auto;padding:2rem;justify-content:center;">
+  <div style="background:white;border-radius:16px;max-width:660px;width:100%;margin:2rem auto;padding:2.2rem;animation:scaleIn 0.28s ease;position:relative;">
+    <button onclick="document.getElementById('pp-modal').style.display='none';document.body.style.overflow='';" style="position:absolute;top:1rem;right:1rem;background:#f1f5f9;border:none;width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer;">×</button>
+    <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:1rem;">Privacy Policy</h2>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;"><strong>Last Updated: January 2024</strong></p>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;">Vijay Kant Accounting &amp; Tax Services ("we", "us") is committed to protecting your privacy. This policy explains how we collect, use, and protect your personal information.</p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">Information We Collect</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;">We collect information you provide when using our services: name, email, phone number, PAN, Aadhaar, financial documents, and other tax-related information necessary for providing our services.</p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">How We Use Your Information</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;">Your information is used solely for providing tax and accounting services, filing returns on your behalf, and communicating about your account. We do not sell or share your data with third parties.</p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">Data Security</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;">All client data is kept strictly confidential and stored securely. Access is limited to authorized personnel only.</p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">Contact Us</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;">For any privacy-related concerns, contact us at: <a href="mailto:jangidvijaykant@gmail.com" style="color:#1447e6;">jangidvijaykant@gmail.com</a> or call +91 9461437143.</p>
+  </div>
+</div>
+
+<!-- Terms Modal -->
+<div id="tc-modal" style="display:none;position:fixed;inset:0;z-index:460;background:rgba(15,23,42,0.75);backdrop-filter:blur(8px);overflow-y:auto;padding:2rem;justify-content:center;">
+  <div style="background:white;border-radius:16px;max-width:660px;width:100%;margin:2rem auto;padding:2.2rem;animation:scaleIn 0.28s ease;position:relative;">
+    <button onclick="document.getElementById('tc-modal').style.display='none';document.body.style.overflow='';" style="position:absolute;top:1rem;right:1rem;background:#f1f5f9;border:none;width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer;">×</button>
+    <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:1rem;">Terms &amp; Conditions</h2>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;"><strong>Last Updated: January 2024</strong></p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">Services</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;">Vijay Kant Accounting &amp; Tax Services provides tax filing, GST compliance, and related financial services. Services are provided based on information submitted by the client. Accuracy of information provided is the client's responsibility.</p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">Fees &amp; Payments</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;">Service fees are communicated upfront before commencement. Fees once paid are non-refundable unless the service has not been initiated.</p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">Confidentiality</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;margin-bottom:0.8rem;">All client information is treated as strictly confidential and will not be disclosed to any third party without written consent.</p>
+    <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin:1rem 0 0.4rem;">Jurisdiction</h3>
+    <p style="font-size:0.88rem;color:#334155;line-height:1.8;">Any disputes shall be subject to the jurisdiction of courts in Jodhpur, Rajasthan, India.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div>
+    <div class="f-logo">
+      <svg width="155" height="38" viewBox="0 0 155 38" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="38" height="38" rx="8" fill="rgba(255,255,255,0.15)"/>
+        <polyline points="8,10 19,28 30,10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="46" y="15" font-family="Georgia,serif" font-size="13.5" font-weight="800" fill="white" letter-spacing="-0.3">VijayKant</text>
+        <text x="46" y="30" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="#93c5fd" letter-spacing="2.2">TAX &amp; ACCOUNTING</text>
+      </svg>
+    </div>
+    <div class="f-info">86, Salawas Road, Jodhpur, Rajasthan &nbsp;|&nbsp; +91 9461437143 &nbsp;|&nbsp; jangidvijaykant@gmail.com</div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem;">
+    <div class="f-copy">© 2024 Vijay Kant Accounting &amp; Tax Services. All rights reserved.</div>
+    <div style="display:flex;gap:1rem;">
+      <button onclick="document.getElementById('pp-modal').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:0.72rem;cursor:pointer;text-decoration:underline;padding:0;">Privacy Policy</button>
+      <button onclick="document.getElementById('tc-modal').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:0.72rem;cursor:pointer;text-decoration:underline;padding:0;">Terms &amp; Conditions</button>
+    </div>
+  </div>
+</footer>
+</div><!-- /public-site -->
+
+<!-- BLOG MODAL -->
+<div class="bmo" id="bmo">
+  <div class="bm">
+    <div class="bm-img" id="bm-img"><button class="bm-close" onclick="closeBlog()">×</button></div>
+    <div class="bm-body">
+      <span class="bm-badge" id="bm-cat"></span>
+      <div class="bm-title" id="bm-title"></div>
+      <div class="bm-meta" id="bm-meta"></div>
+      <div class="bm-content" id="bm-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="mo" id="mo">
+  <div class="modal">
+    <button class="m-close" onclick="closeLogin()">×</button>
+    <div class="m-logo">
+      <svg width="150" height="36" viewBox="0 0 150 36" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="36" height="36" rx="8" fill="#1447e6"/>
+        <polyline points="8,10 18,26 28,10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="44" y="15" font-family="Georgia,serif" font-size="13" font-weight="800" fill="#0f172a" letter-spacing="-0.3">VijayKant</text>
+        <text x="44" y="29" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="#1447e6" letter-spacing="2">TAX SERVICES</text>
+      </svg>
+    </div>
+    <div class="m-sub" style="margin-top:0.5rem;">Sign in to access your secure client account</div>
+    <div class="m-form">
+      <input type="email" id="le" placeholder="Email address" value="client@example.com">
+      <input type="password" id="lp" placeholder="Password" value="password123">
+      <div class="m-err" id="lerr">Invalid email or password. Please try again.</div>
+      <button class="m-btn" onclick="doLogin()">Sign In to Portal →</button>
+      <div class="m-hint">🔑 Demo credentials: client@example.com / password123</div>
+    </div>
+  </div>
+</div>
+
+<!-- CLIENT PORTAL -->
+<div id="portal">
+  <div class="ph">
+    <div class="ph-logo"><svg width="145" height="34" viewBox="0 0 145 34" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="34" height="34" rx="7" fill="rgba(255,255,255,0.18)"/><polyline points="7,9 17,25 27,9" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><text x="42" y="14" font-family="Georgia,serif" font-size="12.5" font-weight="800" fill="white" letter-spacing="-0.3">VijayKant Tax</text><text x="42" y="28" font-family="Arial,sans-serif" font-size="8" font-weight="500" fill="rgba(255,255,255,0.42)" letter-spacing="1.5">CLIENT PORTAL</text></svg></div>
+    <div class="ph-r">
+      <div style="display:flex;align-items:center;gap:0.6rem;"><div class="ph-av">R</div><div class="ph-nm">Ramesh Sharma</div></div>
+      <button class="ph-out" onclick="doLogout()">Sign Out</button>
+    </div>
+  </div>
+  <div class="psb">
+    <div class="sb-l">Main Menu</div>
+    <div class="sb-i on" onclick="goTab('dashboard',this)"><span class="si">🏠</span>Dashboard</div>
+    <div class="sb-i" onclick="goTab('upload',this)"><span class="si">⬆️</span>Upload Documents</div>
+    <div class="sb-i" onclick="goTab('downloads',this)"><span class="si">⬇️</span>My Documents</div>
+    <div class="sb-l">Finance</div>
+    <div class="sb-i" onclick="goTab('payments',this)"><span class="si">💳</span>Payments</div>
+    <div class="sb-i" onclick="goTab('history',this)"><span class="si">📅</span>Filing History</div>
+    <div class="sb-l">Support</div>
+    <div class="sb-i" onclick="goTab('messages',this)"><span class="si">💬</span>Messages</div>
+  </div>
+  <div class="pm">
+    <!-- DASHBOARD -->
+    <div class="ptab on" id="tab-dashboard">
+      <div class="wb"><div><h2>Welcome back, Ramesh! 👋</h2><p>FY 2023-24 — Account Overview</p></div><div class="wb-bs"><div class="wbb"><div class="wbb-n">3</div><div class="wbb-l">Pending</div></div><div class="wbb"><div class="wbb-n">₹4,200</div><div class="wbb-l">Due</div></div></div></div>
+      <div class="dg">
+        <div class="dc"><div class="dc-ico">📋</div><div class="dc-v">ITR Filed</div><div class="dc-l">FY 2023-24</div></div>
+        <div class="dc"><div class="dc-ico">🏢</div><div class="dc-v">GST Active</div><div class="dc-l">Monthly Filing</div></div>
+        <div class="dc"><div class="dc-ico">📁</div><div class="dc-v">8 Files</div><div class="dc-l">Uploaded</div></div>
+        <div class="dc"><div class="dc-ico">✅</div><div class="dc-v">₹1.2L</div><div class="dc-l">Refund Claimed</div></div>
+      </div>
+      <div class="pc"><div class="pc-h"><span class="pc-t">Recent Activity</span></div>
+        <table><thead><tr><th>Date</th><th>Activity</th><th>Status</th></tr></thead><tbody>
+          <tr><td>28 Feb 2024</td><td>ITR-3 Filed — FY 2023-24</td><td><span class="badge bg">Completed</span></td></tr>
+          <tr><td>15 Feb 2024</td><td>GSTR-1 Filed — January 2024</td><td><span class="badge bg">Completed</span></td></tr>
+          <tr><td>10 Feb 2024</td><td>Form 26AS Uploaded</td><td><span class="badge bb">Received</span></td></tr>
+          <tr><td>05 Feb 2024</td><td>TDS Certificate Shared</td><td><span class="badge bg">Downloaded</span></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <!-- UPLOAD -->
+    <div class="ptab" id="tab-upload">
+      <div class="pt">Upload Documents</div><div class="ps">Upload your financial documents securely. Supported formats: PDF, JPG, PNG, Excel, Word.</div>
+      <div class="pc" style="padding:1.3rem;">
+        <div class="dtabs"><div class="dtab on" onclick="setCat(this,'Income')">Income Docs</div><div class="dtab" onclick="setCat(this,'GST')">GST</div><div class="dtab" onclick="setCat(this,'TDS')">TDS / 26AS</div><div class="dtab" onclick="setCat(this,'Bank')">Bank</div><div class="dtab" onclick="setCat(this,'Other')">Other</div></div>
+        <div class="uz" id="uz" onclick="document.getElementById('fi').click()" ondragover="event.preventDefault();this.classList.add('drag')" ondragleave="this.classList.remove('drag')" ondrop="doDrop(event)">
+          <div style="font-size:2.6rem;margin-bottom:0.65rem;">📂</div>
+          <div style="font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.28rem;">Click to browse or drag &amp; drop files here</div>
+          <div style="font-size:0.76rem;color:var(--muted);" id="cat-lbl">Category: Income Documents</div>
+        </div>
+        <input type="file" id="fi" multiple onchange="onFS(event)" style="display:none">
+        <div class="ulist" id="ulist"></div>
+        <button class="btn-p" style="margin-top:1.1rem;width:100%;justify-content:center;" onclick="doUpload()">⬆ Submit Documents</button>
+      </div>
+      <div class="pc" style="margin-top:1.1rem;"><div class="pc-h"><span class="pc-t">Recently Uploaded</span></div>
+        <table><thead><tr><th>File Name</th><th>Category</th><th>Date</th><th>Status</th></tr></thead><tbody>
+          <tr><td>📄 Form_26AS_FY2324.pdf</td><td>TDS</td><td>10 Feb 2024</td><td><span class="badge bg">Processed</span></td></tr>
+          <tr><td>📊 Bank_Statement_Jan.xlsx</td><td>Bank</td><td>08 Feb 2024</td><td><span class="badge bg">Processed</span></td></tr>
+          <tr><td>📄 Salary_Slip_Q3.pdf</td><td>Income</td><td>28 Jan 2024</td><td><span class="badge by">Under Review</span></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <!-- DOWNLOADS -->
+    <div class="ptab" id="tab-downloads">
+      <div class="pt">My Documents</div><div class="ps">Download your completed returns, computations, and certificates.</div>
+      <div class="pc"><div class="pc-h"><span class="pc-t">📋 ITR Returns &amp; Computation</span></div>
+        <table><thead><tr><th>Document</th><th>FY</th><th>Date</th><th>Status</th><th>Download</th></tr></thead><tbody>
+          <tr><td>ITR-3 Acknowledgement</td><td>2023-24</td><td>28 Feb 2024</td><td><span class="badge bg">Filed</span></td><td><button class="dlb" onclick="dl('ITR3_Ack_FY2324.pdf')">⬇ Download</button></td></tr>
+          <tr><td>ITR Computation Sheet</td><td>2023-24</td><td>28 Feb 2024</td><td><span class="badge bg">Ready</span></td><td><button class="dlb" onclick="dl('ITR_Computation_FY2324.pdf')">⬇ Download</button></td></tr>
+          <tr><td>ITR-3 Acknowledgement</td><td>2022-23</td><td>31 Jul 2023</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('ITR3_Ack_FY2223.pdf')">⬇ Download</button></td></tr>
+          <tr><td>ITR Computation Sheet</td><td>2022-23</td><td>31 Jul 2023</td><td><span class="badge bg">Ready</span></td><td><button class="dlb out" onclick="dl('ITR_Computation_FY2223.pdf')">⬇ Download</button></td></tr>
+        </tbody></table>
+      </div>
+      <div class="pc" style="margin-top:1.1rem;"><div class="pc-h"><span class="pc-t">🏢 GST Returns</span></div>
+        <table><thead><tr><th>Return</th><th>Period</th><th>Filed Date</th><th>Status</th><th>Download</th></tr></thead><tbody>
+          <tr><td>GSTR-1</td><td>January 2024</td><td>11 Feb 2024</td><td><span class="badge bg">Filed</span></td><td><button class="dlb" onclick="dl('GSTR1_Jan24.pdf')">⬇ Download</button></td></tr>
+          <tr><td>GSTR-3B</td><td>January 2024</td><td>20 Feb 2024</td><td><span class="badge bg">Filed</span></td><td><button class="dlb" onclick="dl('GSTR3B_Jan24.pdf')">⬇ Download</button></td></tr>
+          <tr><td>GSTR-1</td><td>December 2023</td><td>11 Jan 2024</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('GSTR1_Dec23.pdf')">⬇ Download</button></td></tr>
+          <tr><td>GSTR-9 Annual</td><td>FY 2022-23</td><td>31 Dec 2023</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('GSTR9_FY2223.pdf')">⬇ Download</button></td></tr>
+        </tbody></table>
+      </div>
+      <div class="pc" style="margin-top:1.1rem;"><div class="pc-h"><span class="pc-t">🏘️ TDS &amp; Other Documents</span></div>
+        <table><thead><tr><th>Document</th><th>Period</th><th>Status</th><th>Download</th></tr></thead><tbody>
+          <tr><td>Form 16A — Q3</td><td>FY 2023-24</td><td><span class="badge bg">Ready</span></td><td><button class="dlb" onclick="dl('Form16A_Q3.pdf')">⬇ Download</button></td></tr>
+          <tr><td>Balance Sheet &amp; P&amp;L</td><td>FY 2022-23</td><td><span class="badge bg">Ready</span></td><td><button class="dlb out" onclick="dl('BalanceSheet_FY2223.pdf')">⬇ Download</button></td></tr>
+          <tr><td>Tax Audit Report (3CD)</td><td>FY 2022-23</td><td><span class="badge bg">Ready</span></td><td><button class="dlb out" onclick="dl('Audit3CD_FY2223.pdf')">⬇ Download</button></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <!-- PAYMENTS -->
+    <div class="ptab" id="tab-payments">
+      <div class="pt">Payments &amp; Invoices</div><div class="ps">Select an outstanding invoice and pay securely online.</div>
+      <div class="pay-g">
+        <div>
+          <div style="font-size:0.66rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:0.78rem;">Outstanding Invoices</div>
+          <div class="ii" id="iv1" onclick="selInv('iv1',2500,'ITR Filing — FY 2023-24')"><div><div class="ii-n">INV-2024-003</div><div class="ii-d">ITR Filing — FY 2023-24</div><div class="ii-dt">Due: 31 March 2024</div></div><div style="text-align:right"><div class="ii-a">₹2,500</div><button class="ii-sb">Select</button></div></div>
+          <div class="ii" id="iv2" onclick="selInv('iv2',1200,'GST Return Filing — Q4')"><div><div class="ii-n">INV-2024-004</div><div class="ii-d">GST Return Filing — Q4</div><div class="ii-dt">Due: 15 April 2024</div></div><div style="text-align:right"><div class="ii-a">₹1,200</div><button class="ii-sb">Select</button></div></div>
+          <div class="ii" id="iv3" onclick="selInv('iv3',500,'TDS Return Filing')"><div><div class="ii-n">INV-2024-005</div><div class="ii-d">TDS Return Filing</div><div class="ii-dt">Due: 30 April 2024</div></div><div style="text-align:right"><div class="ii-a">₹500</div><button class="ii-sb">Select</button></div></div>
+          <div style="font-size:0.66rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:1.1rem 0 0.7rem;">Payment History</div>
+          <div class="pc"><table><thead><tr><th>Invoice</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead><tbody>
+            <tr><td>INV-2024-001</td><td>₹3,000</td><td>15 Jan 2024</td><td><span class="badge bg">Paid</span></td></tr>
+            <tr><td>INV-2023-012</td><td>₹2,500</td><td>30 Jul 2023</td><td><span class="badge bg">Paid</span></td></tr>
+            <tr><td>INV-2023-008</td><td>₹1,500</td><td>15 Jun 2023</td><td><span class="badge bg">Paid</span></td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="pnl">
+          <div class="pnl-t">Complete Payment</div>
+          <div id="pnone" style="text-align:center;padding:2.5rem 1rem;color:var(--muted);"><div style="font-size:3rem;margin-bottom:0.8rem;">💳</div><div style="font-size:0.88rem;">Select an invoice to proceed with payment.</div></div>
+          <div id="pform" style="display:none;">
+            <div class="psum"><div class="psr"><span>Service</span><span id="p-svc">—</span></div><div class="psr"><span>Subtotal</span><span id="p-sub">₹0</span></div><div class="psr"><span>GST @ 18%</span><span id="p-gst">₹0</span></div><div class="psr tot"><span>Total Due</span><span id="p-tot">₹0</span></div></div>
+            <div style="font-size:0.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.68rem;">Payment Method</div>
+            <div class="pmethods">
+              <div class="pmi sel" onclick="selPM(this)"><span class="pm-ico">💳</span><div><div class="pm-l">Credit / Debit Card</div><div class="pm-s">Visa, Mastercard, RuPay</div></div><div class="pm-r"></div></div>
+              <div class="pmi" onclick="selPM(this)"><span class="pm-ico">🏦</span><div><div class="pm-l">Net Banking</div><div class="pm-s">All major Indian banks</div></div><div class="pm-r"></div></div>
+              <div class="pmi" onclick="selPM(this)"><span class="pm-ico">📱</span><div><div class="pm-l">UPI</div><div class="pm-s">GPay, PhonePe, Paytm, BHIM</div></div><div class="pm-r"></div></div>
+            </div>
+            <div class="pf"><input type="text" placeholder="Card Number" maxlength="19" oninput="fmtC(this)"><div class="pfr"><input type="text" placeholder="MM / YY" maxlength="7"><input type="text" placeholder="CVV" maxlength="3"></div><input type="text" placeholder="Name on Card"></div>
+            <button class="pbtn" onclick="doPay()">🔒 Pay Securely</button>
+            <div style="text-align:center;font-size:0.7rem;color:#94a3b8;margin-top:0.6rem;">🔐 256-bit SSL Encrypted — Your data is safe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- HISTORY -->
+    <div class="ptab" id="tab-history">
+      <div class="pt">Filing History</div><div class="ps">Complete record of all your tax filings and compliance activities.</div>
+      <div class="pc"><table><thead><tr><th>Filing Type</th><th>Period</th><th>Date Filed</th><th>Reference No.</th><th>Status</th><th>Download</th></tr></thead><tbody>
+        <tr><td>ITR-3</td><td>FY 2023-24</td><td>28 Feb 2024</td><td>ITR-2324-8821</td><td><span class="badge bg">Filed</span></td><td><button class="dlb" onclick="dl('ITR3_FY2324.pdf')">⬇</button></td></tr>
+        <tr><td>GSTR-1</td><td>January 2024</td><td>11 Feb 2024</td><td>GST-JAN24-441</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('GSTR1_Jan24.pdf')">⬇</button></td></tr>
+        <tr><td>GSTR-3B</td><td>January 2024</td><td>20 Feb 2024</td><td>GST-3B-JAN24</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('GSTR3B_Jan24.pdf')">⬇</button></td></tr>
+        <tr><td>TDS Return (26Q)</td><td>Q3 FY 2023-24</td><td>31 Jan 2024</td><td>TDS-Q3-113</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('TDS_Q3.pdf')">⬇</button></td></tr>
+        <tr><td>GSTR-9 Annual</td><td>FY 2022-23</td><td>31 Dec 2023</td><td>GST-9-2223-551</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('GSTR9_FY2223.pdf')">⬇</button></td></tr>
+        <tr><td>ITR-3</td><td>FY 2022-23</td><td>31 Jul 2023</td><td>ITR-2223-4412</td><td><span class="badge bg">Filed</span></td><td><button class="dlb out" onclick="dl('ITR3_FY2223.pdf')">⬇</button></td></tr>
+      </tbody></table></div>
+    </div>
+    <!-- MESSAGES -->
+    <div class="ptab" id="tab-messages">
+      <div class="pt">Messages</div><div class="ps">Communicate directly with your assigned tax consultant.</div>
+      <div class="pc" style="padding:0;">
+        <div class="mc">
+          <div class="ms"><div style="font-size:0.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:0.38rem 0.5rem 0.65rem;">Conversations</div><div class="mc-cv"><div class="mc-n">Vijay Kant Jangid</div><div class="mc-p">Please upload Form 26AS...</div><div class="mc-t">2 days ago</div></div></div>
+          <div class="mm">
+            <div class="mhdr"><strong style="font-size:0.86rem;color:var(--text);">Vijay Kant Jangid</strong> <span style="font-size:0.7rem;color:var(--muted);margin-left:0.45rem;">Tax Consultant</span></div>
+            <div class="mthread" id="mt">
+              <div class="msg-in"><div class="mav s">VK</div><div class="bub-in">Hello Ramesh, please upload your Form 26AS for FY 2023-24 so we can begin your ITR filing.</div></div>
+              <div class="msg-out"><div class="bub-out">Sure, I have uploaded it. Please check.</div><div class="mav c">R</div></div>
+              <div class="msg-in"><div class="mav s">VK</div><div class="bub-in">Received! Your ITR computation will be ready within 2 working days. We will notify you to review and approve.</div></div>
+            </div>
+            <div class="minp-bar"><input class="minp" id="mi" placeholder="Type your message..." onkeypress="if(event.key==='Enter')sendMsg()"><button class="btn-p" onclick="sendMsg()" style="padding:0.62rem 1.1rem;font-size:0.84rem;">Send</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /portal -->
+
+<div class="toast" id="toast"></div>
+
+<script>
+// Navbar scroll
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('up',window.scrollY>30));
+
+// Blog
+const blogs=[
+  {cat:'ITR',title:'New ITR Forms for FY 2023-24: What Changed?',meta:'Vijay Kant Jangid · 28 February 2024 · 5 min read',bg:'bi1',icon:'📋',content:`<h3>Key Changes in ITR Forms</h3><p>CBDT released updated ITR forms for FY 2023-24. The most significant change is that the new tax regime is now the default option. Taxpayers must explicitly opt for the old regime when filing.</p><h3>Virtual Digital Assets (VDA)</h3><p>ITR-2 and ITR-3 now include a dedicated schedule for cryptocurrency and NFT transactions. A flat 30% tax applies on VDA income, with no deductions allowed except cost of acquisition.</p><h3>Which ITR Form Should You Use?</h3><p><strong>ITR-1 (Sahaj):</strong> Resident individuals with income up to ₹50 lakh from salary, one house property, and other sources. <strong>ITR-2:</strong> Capital gains, multiple properties, or foreign income. <strong>ITR-3:</strong> Business or professional income. <strong>ITR-4 (Sugam):</strong> Presumptive income scheme.</p><h3>Filing Deadlines</h3><p>The due date for non-audit cases is 31st July 2024. For audit cases, it is 31st October 2024. Late filing attracts a penalty of ₹5,000 (₹1,000 for income below ₹5 lakh).</p>`},
+  {cat:'GST',title:'GST Council 53rd Meeting: Key Changes for Businesses',meta:'Vijay Kant Jangid · 20 February 2024 · 4 min read',bg:'bi2',icon:'🏢',content:`<h3>Overview of the 53rd GST Council Meeting</h3><p>The 53rd GST Council meeting introduced several important amendments to rates, exemptions, and compliance procedures that every business owner must be aware of.</p><h3>Rate Rationalization</h3><p>Milk cans (all materials) are now taxed uniformly at 12%. Corrugated paper carton boxes have been rationalized to 12%. Fire sprinklers have been reduced from 18% to 12%.</p><h3>Penalty and Interest Waiver</h3><p>A significant relief has been provided — demand notices issued under Section 73 for FY 2017-18, 2018-19, and 2019-20 will attract no interest or penalty if the full tax amount is paid by 31st March 2025.</p><h3>Action Required</h3><p>Review your product GST classifications. Update your accounting software with revised rates. Consult your tax advisor to understand the full impact on your input tax credit claims.</p>`},
+  {cat:'Tax Planning',title:'10 Smart Ways to Reduce Your Tax Liability',meta:'Vijay Kant Jangid · 15 February 2024 · 6 min read',bg:'bi3',icon:'💰',content:`<h3>1. Maximize Section 80C Deductions (₹1.5 Lakh Limit)</h3><p>Invest in PPF, ELSS mutual funds, NSC, tax-saving FDs, or life insurance premiums. This single deduction can save up to ₹46,800 in taxes annually.</p><h3>2. Health Insurance — Section 80D</h3><p>Claim deductions up to ₹25,000 for self and family health insurance. Senior citizen parents qualify for ₹50,000. Total potential deduction: ₹75,000.</p><h3>3. House Rent Allowance (HRA)</h3><p>If you pay rent, ensure your HRA exemption is fully claimed. For rent exceeding ₹1 lakh per year, the landlord's PAN is mandatory.</p><h3>4. Home Loan Tax Benefits</h3><p>Section 24(b) allows ₹2 lakh deduction on home loan interest. Section 80C provides ₹1.5 lakh on principal repayment. First-time buyers can claim an additional ₹50,000 under Section 80EEA.</p><h3>5. NPS — Extra ₹50,000</h3><p>Section 80CCD(1B) provides an additional ₹50,000 deduction on NPS contributions — completely separate from the ₹1.5 lakh Section 80C limit.</p>`},
+  {cat:'MSME',title:'Udyam Registration Benefits — Why Every Business Should Register',meta:'Vijay Kant Jangid · 10 February 2024 · 3 min read',bg:'bi4',icon:'🏭',content:`<h3>What is Udyam Registration?</h3><p>Udyam Registration (formerly MSME Registration) is a government certificate that officially classifies your business as a micro, small, or medium enterprise. It is free, instant, and provides significant advantages.</p><h3>Key Benefits of Registration</h3><p>1. Priority bank loans at reduced interest rates. 2. Collateral-free loans up to ₹2 crore under CGTMSE. 3. Reservation in government tenders. 4. Subsidy on ISO certification. 5. Electricity tariff concessions. 6. Protection against delayed payments from buyers.</p><h3>Eligibility Criteria</h3><p><strong>Micro:</strong> Investment up to ₹1 crore, turnover up to ₹5 crore. <strong>Small:</strong> Investment up to ₹10 crore, turnover up to ₹50 crore. <strong>Medium:</strong> Investment up to ₹50 crore, turnover up to ₹250 crore.</p><h3>Registration Process</h3><p>Registration is completely free on the Udyam portal using your Aadhaar number. The certificate is issued instantly. Contact us and we will handle the entire process for you.</p>`},
+  {cat:'Loans',title:'How to Get a MUDRA Loan — Step by Step Guide',meta:'Vijay Kant Jangid · 5 February 2024 · 5 min read',bg:'bi5',icon:'🏦',content:`<h3>What is the MUDRA Loan Scheme?</h3><p>The Pradhan Mantri MUDRA Yojana (PMMY) allows small and micro businesses to avail collateral-free loans of up to ₹10 lakh from any bank, NBFC, or microfinance institution.</p><h3>Three Categories</h3><p><strong>Shishu:</strong> Loans up to ₹50,000 — for new businesses or startups. <strong>Kishor:</strong> ₹50,001 to ₹5 lakh — for growing businesses needing expansion capital. <strong>Tarun:</strong> ₹5 lakh to ₹10 lakh — for established businesses looking to scale.</p><h3>Documents Required</h3><p>Aadhaar card, PAN card, address proof, business address proof, last 6 months bank statement, a professional project report, and recent passport-size photographs.</p><h3>How a Good Project Report Helps</h3><p>A well-prepared project report significantly increases loan approval chances. We prepare professional MUDRA project reports that clearly present your business case to the bank. Contact: +91 9461437143.</p>`},
+  {cat:'Compliance',title:'Late GST Filing Penalties — How to Avoid Them',meta:'Vijay Kant Jangid · 1 February 2024 · 4 min read',bg:'bi6',icon:'⚖️',content:`<h3>The Cost of Filing Late</h3><p>Missing GST return deadlines is expensive and avoidable. Understanding the penalty structure helps you prioritize compliance and protect your business from unnecessary costs.</p><h3>GSTR-1 Late Fee</h3><p>₹200 per day (₹100 CGST + ₹100 SGST) subject to a maximum of ₹10,000 per return. For nil returns, the late fee is ₹100 per day, capped at ₹2,000.</p><h3>GSTR-3B Late Fee and Interest</h3><p>₹200 per day for taxpayers with tax liability. ₹100 per day for nil filers. Maximum cap of ₹10,000 per return. Additionally, 18% per annum interest is charged on any outstanding tax amount.</p><h3>The Easiest Way to Avoid Penalties</h3><p>Engage a professional tax consultant to handle your monthly GST filing on time. We offer monthly GST filing packages with a zero-penalty guarantee. Contact us at +91 9461437143 to learn more.</p>`}
+];
+
+function openBlog(i){
+  const b=blogs[i];
+  document.getElementById('bm-img').className='bm-img '+b.bg;
+  document.getElementById('bm-img').innerHTML=`<span style="font-size:3.8rem">${b.icon}</span><button class="bm-close" onclick="closeBlog()">×</button>`;
+  document.getElementById('bm-cat').textContent=b.cat;
+  document.getElementById('bm-title').textContent=b.title;
+  document.getElementById('bm-meta').textContent=b.meta;
+  document.getElementById('bm-content').innerHTML=b.content;
+  document.getElementById('bmo').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeBlog(){document.getElementById('bmo').classList.remove('open');document.body.style.overflow='';}
+
+// Auth
+function openLogin(){document.getElementById('mo').classList.add('active');}
+function closeLogin(){document.getElementById('mo').classList.remove('active');document.getElementById('lerr').style.display='none';}
+function doLogin(){
+  if(document.getElementById('le').value.trim()==='client@example.com'&&document.getElementById('lp').value.trim()==='password123'){
+    closeLogin();document.getElementById('public-site').style.display='none';document.getElementById('portal').style.display='grid';
+    showToast('Welcome back, Ramesh!','ok');
+  }else{document.getElementById('lerr').style.display='block';}
+}
+function doLogout(){document.getElementById('portal').style.display='none';document.getElementById('public-site').style.display='block';showToast('Signed out successfully.');window.scrollTo(0,0);}
+
+// Portal tabs
+function goTab(n,el){document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('on'));document.querySelectorAll('.sb-i').forEach(s=>s.classList.remove('on'));document.getElementById('tab-'+n).classList.add('on');el.classList.add('on');}
+
+// Upload
+let files=[],cat='Income';
+function setCat(el,c){document.querySelectorAll('.dtab').forEach(t=>t.classList.remove('on'));el.classList.add('on');cat=c;document.getElementById('cat-lbl').textContent='Category: '+c+' Documents';}
+function onFS(e){addF(Array.from(e.target.files));}
+function doDrop(e){e.preventDefault();document.getElementById('uz').classList.remove('drag');addF(Array.from(e.dataTransfer.files));}
+function addF(fs){fs.forEach(f=>{if(!files.find(x=>x.name===f.name))files.push(f);});renderU();}
+function renderU(){document.getElementById('ulist').innerHTML=files.map((f,i)=>`<div class="ui"><div style="display:flex;align-items:center;gap:0.65rem;"><span style="font-size:1.05rem">${fi(f.name)}</span><div><div class="ui-n">${f.name}</div><div class="ui-s">${(f.size/1024).toFixed(1)} KB &nbsp;·&nbsp; ${cat}</div></div></div><button class="ui-rm" onclick="rmF(${i})">×</button></div>`).join('');}
+function rmF(i){files.splice(i,1);renderU();}
+function fi(n){const e=n.split('.').pop().toLowerCase();return e==='pdf'?'📄':['jpg','jpeg','png'].includes(e)?'🖼':['xlsx','xls'].includes(e)?'📊':'📁';}
+function doUpload(){if(!files.length){showToast('Please select files first.','err');return;}showToast('✅ '+files.length+' file(s) uploaded successfully!','ok');files=[];renderU();document.getElementById('fi').value='';}
+
+// Downloads
+function dl(fn){showToast('Downloading '+fn+'...','');setTimeout(()=>{const b=new Blob(['Vijay Kant Accounting & Tax Services\n'+fn+'\nJodhpur, Rajasthan | +91 9461437143\n\n[Demo — live system serves the actual file]'],{type:'text/plain'});const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=fn.replace('.pdf','.txt');a.click();URL.revokeObjectURL(u);showToast('✅ '+fn+' downloaded.','ok');},600);}
+
+// Payments
+let selI=null;
+function selInv(id,amt,desc){selI={id,amt,desc};document.querySelectorAll('.ii').forEach(x=>x.classList.remove('sel'));document.getElementById(id).classList.add('sel');const g=Math.round(amt*0.18),t=amt+g;document.getElementById('p-svc').textContent=desc;document.getElementById('p-sub').textContent='₹'+amt.toLocaleString('en-IN');document.getElementById('p-gst').textContent='₹'+g.toLocaleString('en-IN');document.getElementById('p-tot').textContent='₹'+t.toLocaleString('en-IN');document.getElementById('pnone').style.display='none';document.getElementById('pform').style.display='block';}
+function selPM(el){document.querySelectorAll('.pmi').forEach(m=>m.classList.remove('sel'));el.classList.add('sel');}
+function fmtC(el){let v=el.value.replace(/\D/g,'').substring(0,16);el.value=v.replace(/(.{4})/g,'$1 ').trim();}
+function doPay(){if(!selI){showToast('Please select an invoice.','err');return;}showToast('Processing payment...','');setTimeout(()=>{showToast('✅ Payment of ₹'+Math.round(selI.amt*1.18).toLocaleString('en-IN')+' successful! Receipt sent to email.','ok');document.getElementById(selI.id).style.opacity='0.4';document.getElementById(selI.id).style.pointerEvents='none';selI=null;document.getElementById('pnone').style.display='block';document.getElementById('pform').style.display='none';document.querySelectorAll('.ii').forEach(x=>x.classList.remove('sel'));},2200);}
+
+// Messages
+function sendMsg(){const inp=document.getElementById('mi');const txt=inp.value.trim();if(!txt)return;const t=document.getElementById('mt');t.innerHTML+=`<div class="msg-out"><div class="bub-out">${txt}</div><div class="mav c">R</div></div>`;inp.value='';t.scrollTop=t.scrollHeight;setTimeout(()=>{t.innerHTML+=`<div class="msg-in"><div class="mav s">VK</div><div class="bub-in">Thank you for your message. We will get back to you shortly. 🙏</div></div>`;t.scrollTop=t.scrollHeight;},1500);}
+
+// Toast
+function showToast(msg,type=''){const el=document.getElementById('toast');el.textContent=msg;el.className='toast show '+(type||'');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),3500);}
+
+// Contact form
+function handleContact(btn){btn.textContent='✓ Message Sent!';btn.style.background='#065f46';clearTimeout(btn._t);btn._t=setTimeout(()=>{btn.textContent='Send Message →';btn.style.background='';},3000);}
+
+
+// Service modal data
+const svcs = [
+  {
+    ico:'📋', title:'ITR Filing', tag:'Income Tax Return Filing',
+    body:`
+      <p><strong>Who needs to file ITR?</strong> Every individual, HUF, firm, or company whose income exceeds the basic exemption limit must file an Income Tax Return each year.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">What We Offer</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> ITR-1 (Sahaj) for salaried individuals up to ₹50 lakh income</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> ITR-2 for capital gains, multiple properties, foreign income</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> ITR-3 for business and professional income</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> ITR-4 (Sugam) for presumptive income (44AD, 44ADA)</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> HUF, partnership firms, LLPs, and companies</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Revised and belated returns also handled</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Deadline:</strong> 31st July 2024 (non-audit) | 31st October 2024 (audit cases)</p>`
+  },
+  {
+    ico:'🏢', title:'GST Registration & Returns', tag:'Goods & Services Tax Compliance',
+    body:`
+      <p><strong>GST compliance is mandatory</strong> for businesses with turnover above ₹20 lakh (₹10 lakh for special category states). We handle everything from registration to monthly returns.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">Our GST Services</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> New GST registration (GSTIN)</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Monthly GSTR-1 and GSTR-3B filing</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Annual GSTR-9 return filing</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> GST reconciliation and ITC management</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> GST notices and department correspondence</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> GST cancellation and surrender</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Zero Penalty Guarantee</strong> — We ensure timely filing of all returns every month.</p>`
+  },
+  {
+    ico:'🪪', title:'PAN Card Services', tag:'Permanent Account Number',
+    body:`
+      <p><strong>PAN Card</strong> is mandatory for all financial transactions, tax filing, bank accounts, and business registrations. We process all PAN related services online quickly.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">PAN Services We Offer</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> New PAN card application for individuals</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> New PAN for companies, firms, and trusts</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> PAN correction — name, date of birth, address</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Duplicate PAN card (lost or damaged)</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Linking PAN with Aadhaar</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> e-PAN (instant digital PAN)</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Fast Processing</strong> — PAN delivered within 7-10 working days. e-PAN within 48 hours.</p>`
+  },
+  {
+    ico:'🏭', title:'MSME / Udyam Registration', tag:'Micro, Small & Medium Enterprise',
+    body:`
+      <p><strong>Udyam Registration</strong> is free, instant, and provides massive benefits to small businesses. Every business owner must register to access government schemes and priority loans.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">Benefits of Registration</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Collateral-free loans up to ₹2 crore under CGTMSE</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Priority in government tenders and procurements</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Lower interest rates on bank loans</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> ISO certification subsidy</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Electricity bill concessions</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Protection from delayed payments from buyers</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Registration is FREE</strong> on Udyam portal. Certificate issued instantly. We handle the entire process.</p>`
+  },
+  {
+    ico:'🍽️', title:'FSSAI License', tag:'Food Safety & Standards Authority of India',
+    body:`
+      <p><strong>FSSAI License</strong> is mandatory for all food businesses in India — from small home-based food units to large manufacturers, restaurants, hotels, and distributors.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">Who Needs FSSAI?</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Restaurants, dhabas, and food stalls</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Food manufacturers and processors</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Food distributors and wholesalers</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Home-based food businesses</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Cloud kitchens and online food delivery</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Annual renewal also handled</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Three categories:</strong> Basic Registration (up to ₹12L turnover) | State License | Central License</p>`
+  },
+  {
+    ico:'™️', title:'Trademark Registration', tag:'Brand Protection & Intellectual Property',
+    body:`
+      <p><strong>Trademark Registration</strong> protects your brand name, logo, and slogan from being copied or misused by competitors. It is a valuable business asset.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">What We Register</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Brand names and business names</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Company logos and symbols</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Slogans and taglines</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Product names across all 45 classes</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Trademark renewal and objection handling</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Trademark search before application</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Valid for 10 years</strong> and renewable. Application filed online — ™ symbol usable immediately after filing.</p>`
+  },
+  {
+    ico:'🚢', title:'Import Export Code (IEC)', tag:'International Trade Registration',
+    body:`
+      <p><strong>Import Export Code (IEC)</strong> is a 10-digit registration number mandatory for all businesses engaged in import or export of goods and services from India.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">Who Needs IEC?</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Any business importing goods into India</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Any business exporting goods from India</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Online sellers on Amazon, Flipkart international</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Required for DGFT, customs, and forex transactions</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> IEC modification and update services</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>No renewal needed</strong> — IEC is valid for a lifetime. Registration completed within 2-3 working days.</p>`
+  },
+  {
+    ico:'📊', title:'Accounting & Bookkeeping', tag:'Financial Records & Reporting',
+    body:`
+      <p><strong>Accurate accounting</strong> is the foundation of every successful business. We maintain your books professionally so you always have a clear picture of your finances.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">Our Accounting Services</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Daily bookkeeping and ledger maintenance</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Profit & Loss statement preparation</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Balance sheet preparation</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Cash flow statement and MIS reports</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Bank reconciliation statement (BRS)</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Tally and accounting software support</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Monthly packages available</strong> — outsource your accounting to us and focus on growing your business.</p>`
+  },
+  {
+    ico:'📄', title:'TDS Return Filing', tag:'Tax Deducted at Source Compliance',
+    body:`
+      <p><strong>TDS (Tax Deducted at Source)</strong> compliance is mandatory for businesses making certain payments like salary, rent, professional fees, and contractor payments.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">Our TDS Services</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> TDS computation and deduction advisory</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Quarterly TDS return filing — Form 24Q, 26Q, 27Q</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Form 16 generation for employees</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Form 16A for non-salary TDS certificates</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> TDS on rent — Form 26QC filing</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> TDS default and demand resolution</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>Quarterly deadlines:</strong> 31st July | 31st October | 31st January | 31st May</p>`
+  },
+  {
+    ico:'🏦', title:'Project Report & Loan File', tag:'Bank Loan Documentation',
+    body:`
+      <p><strong>A professional project report</strong> is the key to getting your bank loan approved. We prepare detailed, banker-friendly project reports that clearly present your business case.</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:#0f172a;margin:1.2rem 0 0.4rem;">Loan Schemes We Cover</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> MUDRA Loan (Shishu, Kishor, Tarun) — up to ₹10 lakh</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> PMEGP — Prime Minister's Employment Generation Programme</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> SBI, PNB, BOB, and all nationalized bank loans</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> CGTMSE (collateral-free loans for MSME)</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Stand-Up India scheme for SC/ST/Women entrepreneurs</li>
+        <li style="display:flex;gap:0.6rem;align-items:flex-start;"><span style="color:#1447e6;font-weight:700;">✓</span> Complete documentation and bank follow-up</li>
+      </ul>
+      <p style="margin-top:1rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:0.8rem 1rem;font-size:0.86rem;color:#1e40af;"><strong>High approval rate</strong> — Our professionally prepared project reports significantly increase the chance of loan approval.</p>`
+  }
+];
+
+function openSvc(i) {
+  const s = svcs[i];
+  document.getElementById('svc-modal-ico').textContent = s.ico;
+  document.getElementById('svc-modal-title').textContent = s.title;
+  document.getElementById('svc-modal-tag').textContent = s.tag;
+  document.getElementById('svc-modal-body').innerHTML = s.body;
+  const modal = document.getElementById('svc-modal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeSvc() {
+  document.getElementById('svc-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('svc-modal').addEventListener('click', function(e){
+  if(e.target === this) closeSvc();
+});
+
+// Scroll reveal
+const obs=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*70);obs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>
